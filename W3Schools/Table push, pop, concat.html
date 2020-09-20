@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Bez nazwy</h2>
+
+<p>klikaj na zmiane.</p>
+
+<button onclick="Fruits()">Fruits</button>
+<button onclick="Cars()">Cars</button>
+<button onclick="Usun()">Usun</button>
+<button onclick="Concat()">Concat</button>
+
+
+<p id="demo"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+var cars = ["BMW","Volkswagen","Audi"];
+document.getElementById("demo").innerHTML = fruits;
+
+function Cars() {
+  cars.push("Mercedes");
+  document.getElementById("demo").innerHTML = cars;
+} 
+    
+function Fruits() {
+  fruits.push("Lemon");
+  fruits.push("arbuz");
+  document.getElementById("demo").innerHTML = fruits;
+}
+    
+function Usun() {
+  fruits.pop();
+  document.getElementById("demo").innerHTML = fruits;
+}
+    
+function Concat() {
+  var arr1 = [];
+  var myChildren = arr1.concat(fruits, cars); 
+  document.getElementById("demo").innerHTML = myChildren;
+}
+    
+
+    
+</script>
+
+</body>
+</html>
