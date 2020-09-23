@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+   <h1>The address element</h1>
+    <address>
+    Written by <a href="mailto:webmaster@example.com">Jon Doe</a>.<br> 
+    Visit us at:<br>
+    Example.com<br>
+    Box 564, Disneyland<br>
+    USA
+    </address>
+    <p style="border 2px solid blue">tekst</p>
+    <script>
+        // find and equals are not regular expression methods.  Replace them. 
+        let methodOne = /hello/.exec("hello")[0] === "hello" // because ret array
+        let methodTwo = /hello/.test("hello") // tests for a match in a string
+        
+        console.log(methodOne);
+        console.log(methodTwo);
+        
+        const regex1 = RegExp('foo*','g');
+        const str1 = 'table football, foosball';
+        let array1;
+        while ((array1 = regex1.exec(str1)) !== null) {  // exec() tests for a match in a string
+          console.log(`Found ${array1[0]}. Next starts at ${regex1.lastIndex}.`);
+          // expected output: "Found foo. Next starts at 9."
+          // expected output: "Found foo. Next starts at 19."
+        }
+        var str = "abcdea 1123ADWDWD!!Jjadw22";
+        let myStr = str.match(/[a-zA-Z]/g).join('');
+	    console.log(myStr);
+    </script>
+</body>
+</html>
