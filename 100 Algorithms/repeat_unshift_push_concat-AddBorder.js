@@ -8,10 +8,9 @@ function addBorder(picture){
     
     picture.unshift(wall);           // The unshift() method adds new items to the beginning of an array, and returns the new length.
     picture.push(wall);              // The push() method adds new item to the ends of the array
-
+    console.log(picture)
     for(let i = 1; i < picture.length - 1; i++){
-       picture[i] = '*'.concat(picture[i],'*');
-       
+       picture[i] = '*'.concat(picture[i],'*'); 
     }
     return picture;
 }
