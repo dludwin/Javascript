@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<button onclick="CountClaps()">CountClaps</button>
+		<button onclick="Char_to_ASCII()">Char_to_ASCII</button>
+		<p id="demo"></p>
+
+		<script>
+			function Char_to_ASCII() {
+				var C = 'Ab';
+				var res = C.charCodeAt(1);
+				var res2 = C.charCodeAt();
+				var res3 = C.codePointAt(0);
+				document.getElementById('demo').innerHTML =
+					'Create a function that returns the ASCII value of the passed in character.<br>' +
+					"C = 'Ab'<br>" +
+					'C.charCodeAt(1) = ' +
+					res +
+					'<br> C.charCodeAt() = ' +
+					res2 +
+					'<br>C.codePointAt(0) = ' +
+					res3;
+			}
+
+			function CountClaps() {
+				var str = 'CcCcC';
+				var res = str.split('C').length - 1;
+				var res2 = str.match(/C/g);
+				var res3 = str.split('C');
+				var res4 = str.match(/C/g).length;
+				document.getElementById('demo').innerHTML =
+					"An overlapped clap is a clap which starts but doesn't finish, as in 'ClaClap' (The first clap is cut short and there are overall 2 claps)<br>" +
+					"var str = 'CcCcC' <br>" +
+					"str.split('C') = " +
+					res3 +
+					"<br> str.split('C').length - 1 = " +
+					res +
+					'<br>str.match(/C/g) = ' +
+					res2 +
+					'<br> str.match(/C/g).length = ' +
+					res4;
+			}
+
+			function splitString(stringToSplit, separator) {
+				const arrayOfStrings = stringToSplit.split(separator);
+
+				console.log('The original string is: ', stringToSplit);
+				console.log('The separator is: ', separator);
+				console.log(
+					'The array has ',
+					arrayOfStrings.length,
+					' elements: ',
+					arrayOfStrings.join(' / ')
+				);
+			}
+
+			const tempestString = 'Oh brave new world that has such people in it.';
+			const monthString = 'Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec';
+
+			const space = ' ';
+			const comma = ',';
+
+			splitString(tempestString, space);
+			splitString(tempestString);
+			splitString(monthString, comma);
+		</script>
+	</body>
+</html>
